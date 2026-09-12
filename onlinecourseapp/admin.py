@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Question, Choice, Submission
 from django.contrib.auth.models import User, Group, Permission
+from .models import Question, Choice, Submission
 
 
 class ChoiceInline(admin.TabularInline):
