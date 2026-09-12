@@ -4,6 +4,10 @@ from onlinecourseapp.views import submit, show_exam_result
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('submit/', submit, name='submit'),
-    path('exam-result/', show_exam_result, name='show_exam_result'),
+    path('<int:course_id>/submit/', submit, name='submit'),
+    path(
+        'course/<int:course_id>/submission/<int:submission_id>/result/',
+        show_exam_result,
+        name='show_exam_result'
+    ),
 ]
